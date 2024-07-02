@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My Music</title>
+        <link rel="shortcut icon" href="#" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    </head>
+    <body>
+        <div class="player">
+            <!-- Dashboard -->
+            <div class="dashboard">
+                <div class="form__search">
+                    <input type="text" id="searchInput" placeholder="Tìm kiếm bài hát" class="form__search-input" />
+                </div>
+                <!-- Header -->
+                <header>
+                    <h4>Now Playing:</h4>
+                    <h2></h2>
+                    <h3></h3>
+                </header>
+                <!-- CD -->
+                <div class="cd">
+                    <div class="cd-thumb" style="background-image: url()"></div>
+                </div>
+                <div class="waves">
+                    <span class="wave paused" style="width: 5px"></span>
+                    <span class="wave paused" style="width: 5px"></span>
+                    <span class="wave paused" style="width: 5px"></span>
+                    <span class="wave paused" style="width: 5px"></span>
+                    <span class="wave paused" style="width: 5px"></span>
+                    <span class="wave paused" style="width: 5px"></span>
+                </div>
+                <div class="waves waves--second">
+                    <span class="wave paused" style="width: 5px"></span>
+                    <span class="wave paused" style="width: 5px"></span>
+                    <span class="wave paused" style="width: 5px"></span>
+                    <span class="wave paused" style="width: 5px"></span>
+                    <span class="wave paused" style="width: 5px"></span>
+                    <span class="wave paused" style="width: 5px"></span>
+                </div>
+                <!-- Control-Btn -->
+                <div class="control">
+                    <div class="btn btn-face">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <div class="btn btn-repeat">
+                        <i class="fa-solid fa-rotate-right"></i>
+                    </div>
+                    <div class="btn btn-prev">
+                        <i class="fa-solid fa-backward"></i>
+                    </div>
+                    <div class="btn btn-toggle-play">
+                        <i class="fa-solid fa-pause icon-pause"></i>
+                        <i class="fa-regular fa-circle-play icon-play"></i>
+                    </div>
+                    <div class="btn btn-next">
+                        <i class="fa-solid fa-forward"></i>
+                    </div>
+                    <div class="btn btn-random">
+                        <i class="fa-solid fa-shuffle"></i>
+                    </div>
+                    <div class="btn btn-volume">
+                        <i class="icon-mute fa-solid fa-volume-xmark"></i>
+                        <i class="icon-unmute fa-solid fa-volume-high"></i>
+                        <input type="range" id="volume-bar" class="volume-bar" value="1" step="0.1" min="0" max="1" />
+                    </div>
+                </div>
+                <div class="playbar__progress">
+                    <span class="time--current"></span>
+                    <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100" />
+                    <span class="time--total"></span>
+                </div>
+                <audio id="audio" src=""></audio>
+            </div>
+
+            <!-- Playlist -->
+            <div class="playlist"></div>
+            <button class="add-btn">Thêm</button>
+        </div>
+
+        <!-- Success -->
+        <div id="toast"></div>
+
+        <script type="module" src="./main.js"></script>
+    </body>
+</html>
